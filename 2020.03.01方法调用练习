@@ -1,0 +1,36 @@
+package dn;
+
+public class ss {
+    public static void main(String[] args) {
+        System.out.println(issame((short)10,(short) 20));
+
+
+    }
+
+    public static boolean issame(byte a, byte b) {
+        System.out.println("两个byte执行");
+        boolean same;
+        if (a == b) {
+            same = true;
+        }else{
+            same=false;
+        }
+        return same;
+
+    }
+    public static boolean issame(short a,short b){
+        System.out.println("两个short执行");
+        boolean same;
+        if(a==b){
+            same=true;
+        }else{
+            same=false;
+        }
+        return same;
+    }
+
+}
+
+
+
+
