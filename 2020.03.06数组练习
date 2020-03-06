@@ -22,3 +22,35 @@ public class yang {
 
     }
 }
+
+package tan;
+/*
+获取数组长度
+数组一旦创建，运行期间，长度不可改变
+数组遍历
+ */
+public class yang {
+    public static void main(String[] args) {
+        int[] tan={5,15,25,8,9,89};
+        int len=tan.length;
+        System.out.println(len);
+        //使用循环遍历 数组长度为限制条件
+        for (int i = 0; i < tan.length; i++) {
+            System.out.println(tan[i]);
+            //求数组最大值
+            int max=tan[0];
+            for (int i1 = 1; i1 < tan.length; i1++) {
+                if (tan[i]>max){
+                    max=tan[i];
+                }
+                
+
+            }
+            System.out.println("最大值"+max);
+
+        }
+
+    }
+}
+
+
