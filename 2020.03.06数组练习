@@ -1,0 +1,24 @@
+package tan;
+/*
+使用动态初始化数组时，其中的元素将会有一个默认值
+如果是整数型，默认为0
+浮点类型，默认0.0
+字符类型，默认\u0000
+布尔类型，默认falfe
+引用类型，默认null
+ */
+public class yang {
+    public static void main(String[] args) {
+        int[] tan={5,15,25};
+        System.out.println(tan[2]);
+        System.out.println(tan[1]);
+        int b= tan[1];
+        System.out.println(b);
+        int[] u=new int[3];
+        System.out.println(u[2]);
+        //将123赋值给一号元素
+        u[1]=123;
+        System.out.println(u[1]);
+
+    }
+}
