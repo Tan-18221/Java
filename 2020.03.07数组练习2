@@ -1,0 +1,53 @@
+package ta;
+/*
+数组元素反转
+ */
+public class ya {
+    public static void main(String[] args) {
+        int []tan=new int[]{10,20,90};
+        //遍历打印数组原本的样子
+        for (int i = 0; i < tan.length; i++) {
+            System.out.println(tan[i]);
+        }
+        System.out.println("----------------------------------");
+        for (int min=0,max=tan.length-1;min<max;min++,max--){
+            int temp=tan[min];
+           tan[min]=tan[max];
+           tan[max]=temp;
+        }
+        for (int i = 0; i < tan.length; i++) {
+            System.out.println(tan[i]);
+        }
+    }
+}
+
+package ta;
+/*
+数组作为方法参数
+当调用方法时候，向方法小括号传递参数，传递进去的其实是数组的地址值
+使用数组作为返回值类型
+ */
+public class ya {
+    public static void main(String[] args) {
+        int []tan=new int[]{10,20,90};
+        printtan(tan);
+        System.out.println();
+        int[]result=qiuhe(10,20,20);
+        System.out.println("总和"+result[0]);
+        System.out.println("平均值"+result[1]);
+
+        }
+        public static void printtan(int []tan){
+            for (int i = 0; i < tan.length; i++) {
+                System.out.println(tan[i]);
+            }
+        }
+        public static int[] qiuhe(int a,int b,int c){
+                int sum = a + b + c;
+                int avg = sum / 3;
+            int[]yang=new int[2];
+            yang[0]=sum;
+            yang[1]=avg;//两个结果返回到总方法里面，int[]result数组，再从result数组里面调用输出
+        return yang;
+        }
+    }
