@@ -1,0 +1,36 @@
+package ta;
+/*
+类的定义
+1.成员变量直接定义在类中，在方法外边
+2.成员方法不用写static
+ */
+public class student {
+    String ame;
+    int age;
+    public void eat(){
+        System.out.println("chifan");
+    }
+}
+
+
+package ta;
+/*
+对象创建
+通常情况下，一个类不能单独直接使用，必须根据类创建一个对象，才能使用
+1.导包：指出需要使用的类在什么位置
+import包名称.类名称
+和当前类属于同一个包，可以省略导包语句不写
+2.创建
+类名称 对象名=new类名称（）
+3.使用
+使用成员变量：对象名.成员变量名
+方法：对象名.成员方法名（参数）
+ */
+public class hu {
+    public static void main(String[] args) {
+        student stu=new student();
+        stu.age=18;
+        System.out.println(stu.age);
+        stu.eat();
+    }
+}
