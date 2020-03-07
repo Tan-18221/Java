@@ -1,0 +1,21 @@
+package ta;
+import java.util.Arrays;
+/*
+面向过程；当需要一个功能的时候，每个步骤都需要亲力亲为，详细处理每一个细节
+面向对象；当需要一个功能的时候，不关心步骤，而是找一个已经有该功能的对象，来完成
+ */
+public class ya {
+    public static void main(String[] args) {
+        int[]tan={10,20,30,40};
+        System.out.print("[");
+        for (int i = 0; i < tan.length; i++) {
+            if (i==tan.length-1){
+                System.out.print(tan[i]+"]");
+            }else{
+                System.out.print(tan[i]+",");
+            }//面向过程
+        }
+        System.out.println("------------------------------");
+        System.out.println(Arrays.toString(tan));//面向对象,找一个JDK给我们提供好的Arrays类，其中有toString方法，直接把数组变成想要的字符串
+    }
+    }
