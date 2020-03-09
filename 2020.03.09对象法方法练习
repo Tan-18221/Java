@@ -14,3 +14,19 @@ public class snn {
 
     }
 }
+
+package ta;
+/*
+使用对象类型作为方法返回值
+ */
+public class duix {
+    public static void main(String[] args) {
+        phone e=get();
+        System.out.println(e.price);
+    }
+    public static phone get(){
+        phone w=new phone();
+        w.price=2222;
+        return w;
+    }
+}
