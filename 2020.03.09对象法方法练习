@@ -1,0 +1,16 @@
+package ta;
+/*
+使用对象类型作为方法的参数
+ */
+public class snn {
+    public static void main(String[] args) {
+        phone s=new phone();
+        s.price=1222;
+        method(s);
+
+    }
+    public static void method(phone m){
+        System.out.println(m.price);
+
+    }
+}
