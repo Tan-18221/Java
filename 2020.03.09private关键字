@@ -1,0 +1,36 @@
+package ta;
+/*
+private使用方法 控制数据
+一旦使用，本类中仍然可以随意访问
+但超出了本类范围就不能直接访问，可以间接访问set get方法
+get,不能有参数，返回值类型和成员变量对应
+set，不能有返回值，参数类型和成员变量对应
+ */
+public class snn {
+    private int age;
+    public void show(){
+        System.out.println("年龄"+age);
+    }
+    //这个成员方法用于给age设置数据
+    public void setAge(int num){
+        if (num>0) {
+            age = num;
+        }else{
+            System.out.println("数据不合理");
+        }
+    }
+    //专门用于获取age的数据
+    public int getAge(){
+        return age;
+    }
+}
+
+package ta;
+public class duix {
+    public static void main(String[] args) {
+        snn k=new snn();
+
+        k.setAge(-20);
+
+    }
+}
