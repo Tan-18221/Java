@@ -1,0 +1,24 @@
+package ta;
+/*
+当方法的局部变量和类的成员变量时候，会优先使用局部变量
+如果需要访问本类的成员结构，需要使用this
+格式；this.成员变量名
+
+ */
+public class snn {
+     String name;
+     public void say(String name){
+         System.out.println(name+",你好，我是"+this.name);
+     }
+}
+
+
+package ta;
+public class duix {
+    public static void main(String[] args) {
+        snn per=new snn();
+        per.name="王林";
+        per.say("王间");
+
+    }
+}
