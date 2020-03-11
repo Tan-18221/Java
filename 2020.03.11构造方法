@@ -1,0 +1,23 @@
+package ta;
+/*
+构造方法是专门用来创建对象的方法，当我们通过关键字new来创建对象时，其实就是在调用方法
+不能有返回值
+如果没有编写任何构造方法，那么编译器将会默认一个构造方法，方法体什么都不做
+一旦编写了构造方法，那么编译器不再赠送
+ */
+public class snn {
+    public snn(){
+        System.out.println("构造");
+    }
+}
+
+package ta;
+/*
+构造方法的调用就是 new 对象，直接调用
+ */
+public class tu {
+    public static void main(String[] args) {
+        snn stu=new snn();
+
+    }
+}
