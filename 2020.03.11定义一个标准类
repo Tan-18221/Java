@@ -1,0 +1,45 @@
+package ta;
+
+public class snn {
+    private String name;
+    private int age;
+
+    public snn() {
+    }
+
+    public snn(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
+
+
+package ta;
+/*
+构造方法的调用就是 new 对象，直接调用
+ */
+public class tu {
+    public static void main(String[] args) {
+        snn stu=new snn();
+        stu.setName("地理");
+        stu.setAge(20);
+        System.out.println("姓名"+stu.getName()+"年龄"+stu.getAge());
+
+    }
+}
