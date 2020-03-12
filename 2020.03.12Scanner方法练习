@@ -1,0 +1,46 @@
+package ta;
+import java.util.Scanner;
+/*
+先进行导包语句
+使用 int num=sc.nextInt();
+ */
+public class tu {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        //从键盘进行输入
+        int num=sc.nextInt();
+
+    }
+}
+
+package ta;
+import java.util.Scanner;
+/*
+三个数比较最大值
+ */
+public class tu {
+    public static void main(String[] args) {
+
+        Scanner sc=new Scanner(System.in);
+        System.out.println("输入第一个数字");
+        int a=sc.nextInt();
+        System.out.println("输入第二个数字");
+        int b=sc.nextInt();
+        System.out.println("输入第三个数字");
+        int c=sc.nextInt();
+        int z;
+        int d;
+        if (a>b){
+            z=a;
+        }else{
+             z=b;
+        }
+        if (z>c){
+            d=z;
+        }else{
+            d=c;
+        }
+        System.out.println("最大值是"+d);
+        
+    }
+}
