@@ -1,0 +1,60 @@
+package ta;
+import java.util.Random;
+/*
+random类使用
+1.导包
+import java.util.Random;
+2.创建
+Random r=new Random();
+3.使用
+int num=r.nextInt()
+获取一个随机int数字（参数代表了范围，左闭右开区间）【0，2）
+如果要闭区间 可以整体加一，不从0开始
+ */
+public class tu {
+    public static void main(String[] args) {
+        int n=5;
+        Random r=new Random();
+        for (int i = 0; i < 100; i++) {
+            int b=r.nextInt(n)+1;
+            System.out.println(b);
+        }
+
+    }
+}
+
+package ta;
+import java.util.Random;
+import java.util.Scanner;
+/*
+模拟猜数字小游戏
+1.产生随机数 一旦产生不再变化
+2.输入
+3.获取键盘输入的数字
+4.得到两个数字，判断一下if
+太大了 提示，重新实验
+猜中了再结束
+5.重来就再来一次，循环，while（true）
+ */
+public class tu {
+    public static void main(String[] args) {
+        Random r=new Random();
+        int a=r.nextInt(100)+1;
+        Scanner sc=new Scanner(System.in);
+        while(true) {
+            System.out.println("请输入数字");
+            int b = sc.nextInt();
+            if (a < b) {
+                System.out.println("太大，请重试");
+            } else if (b < a) {
+                System.out.println("太小了 请重试");
+            } else {
+                System.out.println("恭喜猜中");
+                break;
+            }
+        }
+        }
+
+    }
+
+
