@@ -1,0 +1,73 @@
+package ta;
+import java.util.ArrayList;
+/*
+ArrayList集合
+数组长度不能改变，但是这个可以改变
+ */
+public class tu {
+    public static void main(String[] args) {
+        //简单创建
+        ArrayList<String>list=new ArrayList<>();
+        System.out.println(list);
+        //add方法添加字符串
+        list.add("nijnin");
+        System.out.println(list);
+    }
+}
+
+package ta;
+import java.util.ArrayList;
+/*
+ArrayList集合
+常用方法
+如果希望在集合里面存储基本数据类型，必须使用基本类型的包装类，
+基本类型  包装类
+add 添加
+get获取元素//返回值是E
+remove删除//返回值E
+size获取长度//返回值是int
+ */
+public class tu {
+    public static void main(String[] args) {
+        //简单创建
+        ArrayList<String>list=new ArrayList<>();
+        System.out.println(list);
+        list.add("hjj");
+        list.get(0);
+        list.remove(0);
+        //遍历
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
+        }
+    }
+    
+    
+ package ta;
+import java.util.ArrayList;
+import java.util.Random;
+/*
+生成6个1-33之间的随机整数，添加到集合，然后遍历集合
+1.存储6个数字，集合里面
+2.random
+3.循环六次
+4.添加进入集合
+5.遍历集合
+ */
+public class tu {
+    public static void main(String[] args) {
+        //简单创建
+        ArrayList<Integer>list=new ArrayList<>();
+        Random r=new Random();
+        for (int i = 0; i < 6; i++) {
+            int num=r.nextInt(33)+1;
+            list.add(num);
+        }
+        //遍历
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
+        }
+
+    }
+
