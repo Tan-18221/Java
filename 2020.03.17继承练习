@@ -1,0 +1,108 @@
+package ta;
+//主方法
+public class list  {
+    public static void main(String[] args) {
+        kl k=new kl();
+        k.m();
+    }
+    }
+ package ta;
+/*
+继承基本格式，子类就是一个父类
+定义父类的格式（一个普通类的定义）
+public class 父类名称{}
+定义子类名称
+public class 子类名称 extends 父类名称{}
+ */
+//父类
+public class tu {
+    public void m(){
+        System.out.println("zhix");
+    }
+    }
+    
+package ta;
+public class kl extends tu {
+
+}
+
+package ta;
+/*创建一个父类对象
+在父子类继承中，如果成员变量重名，则创建子类对象时，访问有两种方式
+直接通过子类对象访问成员变量；
+ 等号左边是谁，就优先使用谁，没有则向上找
+间接通过成员方法访问成员变量
+ 该方法属于谁就优先用谁
+ */
+public class mn {
+    public static void main(String[] args) {
+        tu lk=new tu();
+        System.out.println(lk.num);
+
+        kl l=new kl();//子类对象
+        System.out.println(l.a);
+        System.out.println("======================");
+        System.out.println(l.a);//等号左边是子类，优先使用子类
+        lk.fu();
+        l.z();
+    }
+}
+package ta;
+
+public class kl extends tu {
+    int a=20;
+    public void z(){
+        System.out.println(a);
+    }
+}
+
+package ta;
+//父类
+public class tu {
+    int num=10;
+    int a=200;
+    public void fu(){
+        System.out.println(a);
+    }
+
+    }
+
+package ta;
+/*
+方法覆盖重写的注意事项
+1。必须保证父子类之间方法的名称相同，参数列表相同
+@override,写在方法前面，用来检测是不是有效的正确覆盖重写
+这个注解可写可不写
+2。子类方法返回值必须小于等于父类方法的返回值范围
+ */
+public class tu {
+    public void p(){
+        System.out.println("打电话");
+    }
+    public void b(){
+        System.out.println("发短信");
+    }
+    }
+  
+  package ta;
+//子类
+public class kl extends tu  {
+    //直接写方法名回车
+    @Override
+    public void b() {
+        super.b();
+        System.out.println("显示头像");
+    }
+}
+
+package ta;
+//子类
+public class mn  {
+    public static void main(String[] args) {
+        tu k=new tu();
+        k.b();
+        kl j=new kl();
+        j.b();
+    }
+    }
+
