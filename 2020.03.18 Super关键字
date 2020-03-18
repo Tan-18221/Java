@@ -1,0 +1,22 @@
+package ta;
+
+public class tu {
+    int num=10;
+    public void k(){
+        System.out.println("父类方法");
+    }
+    }
+package ta;
+/*
+super关键字三种用法
+1.在子类成员方法中，访问父类成员变量 super.
+2.在子类成员方法中访问父类成员方法
+3.在子类构造方法中访问父类构造方法
+ */
+public class kl extends tu  {
+    int num=20;
+    public void zi() {
+        System.out.println(super.num);
+        super.k();
+    }
+}
