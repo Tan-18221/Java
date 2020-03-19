@@ -1,0 +1,134 @@
+package ta;
+/*
+发红包
+三要素：
+1.返回值类型 集合 ArrayList<>,把钱分成很多份，然后用集合存储
+2.方法名称 send
+3.参数列表 1.总共发多少 2.分成多少份
+收红包
+三要素
+1.返回值类型 void
+2.方法名称 re
+3.参数列表 ArrayList<>
+ */
+public abstract class tu {
+    //用户类
+    private String name;
+    private int money;
+    public tu() {
+    }
+    public tu(String name, int money) {
+        this.name = name;
+        this.money = money;
+    }
+    //显示目前用户多少钱
+    public void show(){
+        System.out.println("我叫"+ name+"我有多少钱"+money);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getMoney() {
+        return money;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
+    }
+}
+package ta;
+//群主类
+import java.util.ArrayList;
+
+public class kl extends tu   {
+    public kl() {
+    }
+
+    public kl(String name, int money) {
+        super(name, money);
+    }
+    public ArrayList<Integer> send(int to,int count){
+        //首先需要一个集合，用来存储若干个红包金额
+        ArrayList<Integer> k=new ArrayList<>();
+        //首先看群主金额
+        int leftmoney =super.getMoney();
+        if (to>leftmoney){
+            System.out.println("余额不足");
+            return k;
+        }
+        //扣钱，重新设置余额
+        super.setMoney(leftmoney-to);
+        //发红包需要拆分
+        int a=to/count;
+        //把红包一个一个放在集合中
+        for (int i = 0; i < count; i++) {
+            k.add(a);
+        }
+        return k;
+    }
+}
+
+package ta;
+import java.util.ArrayList;
+import java.util.Random;
+
+//成员
+public class mn extends tu {
+    public mn() {
+    }
+
+    public mn(String name, int money) {
+        super(name, money);
+    }
+    public void re(ArrayList<Integer> l){
+        //从多个中随便抽取，随机获取一个集合当中的索引编号
+        int d=new Random().nextInt(l.size());
+        //从集合中删除，并且得到给自己
+        Integer v=l.remove(d);
+        //当前成员的金额
+        int money=super.getMoney();
+        //加法，并且重新设置回去
+        super.setMoney(money + v);
+
+
+    }
+}
+
+package ta;
+//主方法
+import java.util.ArrayList;
+
+public class gong {
+    public static void main(String[] args) {
+        kl k=new kl("群主",100);
+        mn m=new mn("成员2",0);
+        mn z=new mn("成员3",0);
+        mn q=new mn("成员4",0);
+
+        k.show();
+        m.show();
+        z.show();
+        q.show();
+
+//发30块，分成三个红包
+        ArrayList<Integer> lo=k.send(30,3);
+        //三个成员，收红包
+        m.re(lo);
+        z.re(lo);
+        q.re(lo);
+//再次打印
+        k.show();
+        m.show();
+        z.show();
+        q.show();
+    }
+}
+
+
+
