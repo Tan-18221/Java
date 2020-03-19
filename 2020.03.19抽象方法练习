@@ -1,0 +1,33 @@
+package ta;
+/*
+抽象方法：就是直接加上abstract关键字，然后去掉大括号，直接分号结束。
+抽象类：抽象方法所在的类，必须是抽象类才行，在class之前写上abstract
+
+如何使用抽象类和抽象方法
+1.不能直接创建new抽象类对象。
+2.必须用一个子类来继承父类
+3.子类必须覆盖重写抽象父类当中的抽象方法,直接在extends选择，直接覆盖重写
+覆盖重写：子类去掉抽象方法的abstract关键字，然后补上方法体大括号
+4.创建子类对象进行使用
+ */
+public abstract class tu {
+    //抽象方法
+    public abstract void eat();
+
+    }
+    
+ package ta;
+//子类
+public class mn extends tu {
+        public  void eat(){
+            System.out.println("猫吃鱼");
+        }
+    }
+    
+ package ta;
+public class kl   {
+    public static void main(String[] args) {
+        mn k=new mn();
+        k.eat();
+    }
+    }
