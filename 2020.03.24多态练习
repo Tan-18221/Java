@@ -1,0 +1,83 @@
+package ta;
+/*
+多态的格式与使用（父类引用指向子类对象）
+格式
+父类名称 对象名=new 子类名称（）
+接口名称 对象名=new 实现类名称（）
+ */
+public class hg  {
+    public static void main(String[] args) {
+        hn b=new tu();
+        b.m();
+    }
+    }
+ package ta;
+
+public class tu extends hn {
+    @Override
+    public void m() {
+        super.m();
+        System.out.println("子类方法");
+    }
+}
+
+package ta;
+public class hn {
+    public void m(){
+        System.out.println("父类方法");
+    }
+
+}
+/*
+访问成员变量的两种方式
+1.直接通过对象名称访问成员变量，等号左边是谁，优先用谁
+2.直接通过成员方法访问成员变量，看该方法属于谁，优先用谁
+*/
+/*
+在多态的代码中，成员方法的访问规则是
+看new的是谁，就优先用谁，没有则向上找
+成员方法：编译看左边，运行看右边
+成员变量：编译看左边，运行看左边
+ */
+ /*
+1.对象的向上转型，其实就是多态写法
+格式 父类名称 对象名=new 子类名称（）；
+含义 右侧创建一个子类对象，把它当作父类来使用。
+注意 向上转型一定可以，小范围转向大范围
+对象一旦向上转型为父类，那么就无法调用子类原本的方法
+2.解决方案，用对象向下转型还原
+格式：子类名称 对象名=（子类名称）父类对象；
+将父类对象还原成为本来的子类对象
+ */
+package ta;
+/*
+instanceof关键字
+如何才能知道一个父类引用的对象，本来是什么子类
+格式
+对象 instanceof 类型
+这将会得到一个布尔值判断结果，也就是判断前面的对象能不能当作后面类型的实例
+ */
+public class j {
+    public static void main(String[] args) {
+        tu h=new hg();
+        h.eat();
+        //如果希望使用子类方法，需要向下转型
+        if(h instanceof hg){
+            hg v=(hg) h;
+            v.k();
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
