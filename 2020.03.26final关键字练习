@@ -1,0 +1,101 @@
+1.final修饰一个类
+package ta;
+/*
+当final关键字修饰一个类的时候，格式
+public final class 类名称{
+}
+含义：当前这个类不能有子类，一定有父类
+不能使用final类作为父类
+ */
+public final class com {
+    public void m(){
+        System.out.println("方法执行");
+    }
+}
+2.final修饰一个方法
+package ta;
+/*
+当final关键字修饰一个方法的时候，这个方法就是最终方法。也就是不能被覆盖重写。
+格式
+修饰符 final 返回值类型 方法名称（参数列表）{
+方法体}
+注意事项：
+对于类、方法来说，abstract关键字和final关键字不能同时使用，因为矛盾 
+*/
+public  class com {
+    public final void m(){
+        System.out.println("方法执行");
+    }
+ 3.final修饰一个局部变量
+ package ta;
+/*
+对于基本类型来说，不可变说的是变量当作的数据不可改变
+对于引用类型来说，不可变说的是变量当中的地址值不可改变
+*/
+public  class com {
+    public static void main(String[] args) {
+        int num=10;
+        System.out.println(num);
+        num=20;
+        System.out.println(num);
+        //一旦使用final用来修饰局部变量，那么这个变量就不能进行更改
+        final int num2=200;
+        System.out.println(num2);
+        final int num3;
+        num3=30;
+        //对于基本类型来说，不可变说的是变量当作的数据不可改变
+    }
+    }
+ 4.final修饰成员变量
+ package ta;
+/*
+对于成员变量来说，如果使用final关键字修饰，那么这个变量也不可变
+1.由于成员变量具有默认值，所以用了final之后必须手动赋值，不会再给默认值
+2.对于final的成员变量，要么直接赋值，要么通过构造方法赋值，二者选其一
+3.必须保证类当中所有重载的构造方法，都最终会对final的成员变量进行赋值
+ */
+public class zi  {
+    private final String name;
+
+    public zi() {
+        name="hj";
+    }
+
+    public zi(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+    
+}
+    
+ /*
+Java中的四种权限修饰符
+            public > protected > (default) > private
+同一个类      可         可           可         可
+同一个包      可         可           可        不可
+不同包子类     可        可           不可       不可
+不同包非子类   可        不可          不可      不可
+注意事项：
+default并不是关键字，而是根本不写
+*/  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
