@@ -1,0 +1,150 @@
+package ta.j;
+/*
+如果一个事物内部包含另一个事物，那么这就是一个类内部包含另一个类
+分类：
+1.成员内部类
+2.局部内部类（包含匿名内部类）
+
+成员内部类定义格式
+修饰符 class 类名称{
+     修饰符 class 内部类名称{}
+}
+内用外，随意访问；外用内，需要内部对象
+如何使用成员内部类
+1.间接方式：在外部类方法中，使用内部类，然后main只是调用外部类的方法
+2.直接方式：公式
+外部类名称.内部类名称 对象名=new 外部类名称（）.new 内部类名称（）；
+对象名.方法 调用
+*/
+public class c {
+        public static void main(String[] args) {
+            bo b=new bo();//创建外部类对象
+            b.b();//通过外部类对象，调用外部类方法，里面间接使用内部类方法
+            System.out.println("------------------------------");
+            bo.h H=new bo().new h();
+            H.b();
+        }
+    }
+  
+  
+  package ta.j;
+
+public class bo {//外部类
+
+    public class h{//成员内部类
+        //内部类方法
+        public void b(){
+            System.out.println("跳动");
+            System.out.println(name);
+        }
+
+    }
+    private String name;
+    //外部类方法
+    public void b(){
+        System.out.println("外部类的方法");
+        h H=new h();
+        H.b();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}
+
+内部类同名变量访问
+/如果出现了重名变量，那么格式是 外部类名称.this.外部类成员变量名
+
+*局部内部类*
+
+package ta.j;
+/*
+如果一个类是定义在一个方法内部，那么这就是一个局部内部类
+只有当前所属的方法才能调用他，出了这个方法外面就不能用了
+格式
+修饰符 class 外部类名称{
+     修饰符 返回值类型 外部类方法名称（参数列表）{
+           class 局部内部类名称{
+           }
+     }
+}
+*/
+public class c {
+        public void m(){
+            class in{//局部内部类
+                int a=10;
+                public void inn(){
+                    System.out.println(a);
+                }
+            }
+            in k=new in();
+            k.inn();
+        }
+    }
+package ta.j;
+
+public class bo {
+    public static void main(String[] args) {
+        c bn=new c();
+        bn.m();
+    }
+}
+
+
+*匿名内部类*
+package ta.j;
+public interface m {
+    void k();
+}
+
+package ta.j;
+/*
+如果接口的实现类（或者是父类的子类）只需要使用唯一一次，
+那么这种情况下就可以省略该类的定义，而改用（匿名内部类）
+匿名内部类的定义格式
+接口名称 对象名=new 接口名称（）{
+    覆盖重写所有抽象方法
+};
+对格式解析：
+1.new代表创建对象的动作
+2.接口名称就是匿名内部类需要实现哪个接口
+3.大括号里面的才是匿名内部类的内容
+注意事项
+1.匿名内部类在创建对象时只能使用唯一一次
+2.匿名内部类，在调用方法时，只能调用唯一一次
+3.匿名内部类是省略了实现类子类名称，但是匿名对象是省略了对象名称
+
+ */
+public class main {
+    public static void main(String[] args) {
+        m n=new c();
+        n.k();
+        //使用匿名内部类
+        m s=new m() {
+            @Override
+            public void k() {
+                System.out.println("匿名内部类实现了方法");
+            }
+        };
+        s.k();
+    }
+}
+
+    
+    
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
