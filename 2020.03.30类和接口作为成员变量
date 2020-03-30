@@ -1,0 +1,115 @@
+类作为成员变量
+package ta.j;
+public class c {
+    private String name;
+    private w n;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public w getN() {
+        return n;
+    }
+
+    public void setN(w n) {
+        this.n = n;
+    }
+
+    public c(String name, w n) {
+        this.name = name;
+        this.n = n;
+    }
+
+    public c() {
+    }
+}
+
+package ta.j;
+public class w {
+    private String code;
+    public w(String code) {
+        this.code = code;
+    }
+
+    public w() {
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+}
+
+package ta.j;
+public class m {
+    public static void main(String[] args) {
+        c b=new c();
+        b.setName("kk");
+        w we=new w("shh");
+        b.setN(we);
+
+    }
+}
+}
+
+接口作为成员变量
+package ta.j;
+public class hero {
+    private String name;
+    private sk ski;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public sk getSki() {
+        return ski;
+    }
+
+    public void setSki(sk ski) {
+        this.ski = ski;
+    }
+
+    public hero(String name, sk ski) {
+        this.name = name;
+        this.ski = ski;
+    }
+
+    public hero() {
+    }
+}
+package ta.j;
+public class gam {
+    public static void main(String[] args) {
+        hero h=new hero();
+        h.setName("a");
+        h.setSki(new sk() {
+            @Override
+            public void use() {
+                System.out.println("bibibi");
+            }
+        });
+
+    }
+}
+package ta.j;
+
+public interface sk {
+    void use();
+
+}
+
+
+
