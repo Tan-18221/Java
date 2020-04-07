@@ -1,0 +1,109 @@
+package ta.j;
+import java.util.ArrayList;
+/*
+泛型
+泛型是一种未知的数据类型，当我们不知道使用什么数据类型的时候，可以使用泛型
+泛型也可以看成一个变量，用来接收数据类型
+E Element元素
+Arraylist集合在定义的时候，不知道集合中都会有什么数据类型的数据，
+创建集合对象对时候，就会确定泛型的数据类型
+ */
+public class data {
+    public static void main(String[] args) {
+        show();
+        /*
+        创建集合对象，不使用泛型
+        好处
+        集合不使用泛型，可以存储任意数据类型
+        弊端
+        不安全 会引起异常
+         */
+    }
+
+    private static void show() {
+        ArrayList list = new ArrayList();
+        list.add("sb");
+        list.add(12);
+
+    }
+
+}
+
+
+package ta.j;
+
+/*
+定义一个含有泛型的类，模拟ArrayList集合
+泛型是一个未知数据类型，当我们不确定使用什么数据类型的时候可以使用泛型
+ */
+public class k<E> {
+    private E name;
+
+    public E getName() {
+        return name;
+    }
+
+    public void setName(E name) {
+        this.name = name;
+    }
+}
+package ta.j;
+
+public class c {
+    public static void main(String[] args) {
+        k n = new k();
+        n.setName("hj");
+        Object s = n.getName();
+        System.out.println(s);
+
+        k<Integer> m = new k<>();
+        m.setName(12);
+        Integer l = m.getName();
+        System.out.println(l);
+
+    }
+}
+
+package ta.j;
+/*
+定义含有泛型的方法
+格式
+修饰符<泛型> 返回值类型 方法名（参数列表（使用泛型））{}
+调用方法时候确定泛型数据类型
+ */
+public class d {
+    public <m> void mo(m h){
+        System.out.println(h);
+    }
+
+}
+
+package ta.j;
+
+public class c {
+    public static void main(String[] args) {
+        d k=new d();
+        k.mo(10);
+        k.mo("jkk");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
