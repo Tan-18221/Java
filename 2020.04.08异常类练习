@@ -1,0 +1,185 @@
+package ta.j;
+public class hj {
+    public static void main(String[] args) {
+        //创建int类型的数组，并赋值
+        int [] arr={1,2,3};
+        int e=get(arr,3);
+        System.out.println(e);
+
+    }
+    /*
+    定义一个方法，获取数组指定索引处的元素
+    参数：
+    int[]arr
+    int index
+     */
+    public static int get(int[]arr,int index){
+        int el=arr[index];
+        return el;
+
+    }
+}
+package ta.j;
+/*
+Throwable:是Java语言中所有错误或异常的超类
+Exception 编译期异常，进行编译Java程序出现的问题
+RuntimeException 运行期异常，Java程序运行过程中出现的问题
+把异常处理掉 可以继续运行
+Error 错误 必须修改源代码
+异常的处理
+关键字throw
+在指定的方法中抛出指定的异常
+使用格式
+throw new xxxException("异常产生的原因"）；
+注意事项
+1.throw关键字必须写在方法内部
+2.throw关键字后边的new对象必须是Exception或者Exception的子类对象
+3.throw关键字抛出指定的异常对象，我们就必须处理这个异常对象
+ */
+public class jk {
+    public static void main(String[] args) {
+        int [] arr=null;
+        int u=get(arr,0);
+        System.out.println(u);
+    }
+        /*
+    定义一个方法，获取数组指定索引处的元素
+    参数：
+    int[]arr
+    int index
+     */
+        public static int get(int[]arr,int index){
+            if (arr==null){
+                throw new NullPointerException("传递的数组的值是null");
+            }
+            int el=arr[index];
+            return el;
+
+        }
+
+    }
+    
+    package ta.j;
+import java.io.FileNotFoundException;
+/*
+throws关键字：异常处理的第一种方式，交给别人处理
+作用
+当方法内部抛出异常对象的时候，就必须处理这个异常对象
+可以使用throws关键字处理异常对象
+使用格式：在方法声明时使用
+修饰符 返回值类型 方法名（参数列表）throws{
+       throw new aaaException("产生原因"）；
+       throw new bbbException("产生原因"）；
+}
+注意事项
+1.throws关键字必须写在方法声明处
+2.throws关键字后边声明的异常必须是Exception或者子类
+3.方法内部如果抛出了多个异常对象，那么throws后边也必须声明多个异常
+4.调用了一个声明抛出异常的方法，我们就必须处理声明的异常
+ */
+public class jk {
+    public static void main(String[] args) throws FileNotFoundException {
+        r("c.txt");
+
+    }
+        /*
+    定义一个方法，获取数组指定索引处的元素
+    参数：
+    int[]arr
+    int index
+     */
+        public static void r(String fn) throws FileNotFoundException{
+            if (!fn.equals("c.txt")){
+                throw new FileNotFoundException("不是");
+            }
+        }
+    }
+    
+    package ta.j;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+/*
+try...catch关键字：异常处理的第二种方式，自己处理
+格式
+try{
+可能产生异常的代码异常对象之后怎么处理异常对象
+}catch(定义一个异常的变量，接收try中抛出的异常对象){
+异常的处理逻辑，产生
+}
+catch（异常类名 变量名）{
+}
+注意：
+1。try中抛出多个异常对象，那么可以使用多个catch来处理这些异常对象
+2。如果try中产生了异常，那么就会执行catch中的异常处理逻辑，执行完毕catch中的处理逻辑，继续执行后面的代码
+3。如果try没有产生异常，那么就不会执行catch中的异常处理逻辑，执行完try中的代码
+
+throwable中定义了3个异常处理方法
+String getMessage() 返回此throwable的详细字符串
+String toString()返回此throwable的简短描述
+void printStackTrace()默认调用此方法
+ */
+public class jk {
+    public static void main(String[] args) {
+        try{
+            r("d");
+        }catch(IOException e){//try中抛出什么异常对象，catch就定义什么异常变量，用来接收这个异常对象
+            System.out.println("catch后缀");
+
+        }
+        System.out.println("houxu");
+        
+    }
+        public static void r(String fn) throws IOException{
+            if (!fn.equals("c.txt")){
+                throw new FileNotFoundException("不是");
+            }
+        }
+    }
+ /*
+finally代码块
+无论是否出现异常都能执行
+注意
+1。finally不能单独使用，必须和try一起使用
+2。finally一般用于资源释放（资源回收），无论程序是否出现异常，最后都要资源释放
+ */
+ 
+ package ta.j;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+/*
+自定义异常类
+Java给我们提供的异常类不够使用，需要自己定义一些异常类
+格式
+public class xxxException extends Exception{
+        添加一个空参数构造方法
+        添加一个带异常信息的构造方法
+}
+注意
+1。自定义异常类一般都是以Exception结尾
+2。自定义异常类必须继承 Exception或者RuntimeException
+继承Exception 那么自定义的异常类就是一个编译期间异常，如果方法内部抛出异常，就必须处理这个异常
+继承RuntimeException那么自定义异常类就是运行期异常，无需处理，交给虚拟机
+ */
+public class jk extends Exception{
+    public jk(){
+
+    }
+    /*
+    添加一个带异常信息的构造方法
+    方法内部会调用父类带异常信息的构造方法，让父类来处理这个异常信息
+     */
+    public jk(String me){
+        super(me);
+
+    }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
