@@ -1,0 +1,50 @@
+/*
+线程属于进程
+是进程中的一个执行但愿，负责程序的执行
+主线程：执行main方法的线程
+单线程程序：Java程序中只有一个线程
+执行从main方法开始从上倒下
+ */
+ 
+ package ta.j;
+/*
+创建多线程程序的第一种方式：创建Thread类的子类
+实现步骤
+1。创建thread类的子类
+2。在thread类的子类中重写thread类中的run方法，设置线程任务
+3。创建thread类的子类对象
+4。调用thread类中的方法start，开启新的线程，执行run方法
+ */
+public class x extends Thread {
+    @Override
+    public void run() {
+        for (int i = 0; i <20 ; i++) {
+            System.out.println(i);
+        }
+    }
+}
+
+package ta.j;
+
+public class m {
+    public static void main(String[] args) {
+        x m=new x();
+        m.start();
+        for (int i = 0; i < 20; i++) {
+            System.out.println(i);
+        }
+    }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
