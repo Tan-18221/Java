@@ -1,0 +1,51 @@
+package ta.j;
+/*
+juint单元测试：
+测试分类：
+1。黑盒测试 不需要写代码，给输入值，看程序是否能够输出期望值
+2。白盒测试 需要写代码
+Junit使用
+白盒测试
+步骤
+1。定义一个测试类，
+2。定义测试方法 可以独立运行 返回值void 建议空参
+3。给方法加@Test
+4.导入junit依赖环境
+
+ */
+public class hj {
+    public int add(int a,int b){
+        return a+b;
+    }
+    public int sub(int a,int b) {
+        return a + b;
+    }
+
+
+
+}
+
+
+package ta.j;
+
+import org.junit.Test;
+
+public class t {
+    /*
+    测试add方法
+     */
+    @Test
+    public void testadd(){
+        /*
+        1.创建计算机对象
+        2。调用add方法
+         */
+        hj c=new hj();
+        int r=c.add(1,2);
+        System.out.println(r);
+
+    }
+}
+
+
+
