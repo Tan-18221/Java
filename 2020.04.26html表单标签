@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+表单标签 采集用户输入的数据的 用于和服务器进行交互
+使用标签
+form：用于定义表单的，可以定义一个范围，代表采集用户数据的范围
+属性：action 指定提交数据的位置 # 提交当前页面
+     method 指定提交方式 get：1.请求的参数会在地址栏显示 2。URL长度有限制 3。get请求不太安全
+                       post：1.请求参数不会在地址栏显示，会封装在请求体中2。URL长度没限制
+表单中的数据要想被提交，必须指定其name属性
+
+表单项标签
+input 可以通过type值改变样式
+    type属性
+        text 文本输入框，默认
+        password 密码输入框 秘文显示
+        radio 单选框
+              要想让多个单选框实现单选功能，则多个单选框的name属性值必须一样
+              一般会给每一个单选框指定value属性，指定其被选中后提交的值
+        checkbox 复选框
+        checked 默认值
+        placeholder 输入框提示内容
+        label：指定输入项的for属性一般会和input的ID属性值对应，对应了，则点击label区域，会让input输入框获取输入焦点
+        file: 文件选择框
+        按钮
+        submit 提交按钮
+        button 一个按钮
+        image：图片提交按钮
+         src属性指定图片路径
+
+select 下拉列表
+子元素：option 指定列表项
+selected 默认
+textarea 文本域
+cols：指定列数 每一行有多少个字符
+rows：默认多少行
+-->
+<form action="#" method="get">
+用户名：<input type="text" name="username" placeholder="请输入用户名"><br>
+密码：<input type="password" name="password" placeholder="请输入密码"><br>
+性别：<input type="radio" name="gender" value="male" checked>  男
+     <input type="radio" name="gender" value="female">  女
+    <br>
+爱好:<input type="checkbox" name="hobby" value="g"> 逛街
+    <input type="checkbox" name="hobby" value="c"> 吃饭
+    <input type="checkbox" name="hobby" value="k"> 看电影
+    <input type="checkbox" name="hobby" value="x"> 学习
+    <br>
+图片：<input type="file" name="file">
+    <br>
+隐藏域：<input type="hidden" name="id" value="aaa">
+    <br>
+取色器：<input type="color" name="color">
+    <br>
+生日：<input type="date" name="s"><br>
+    <input type="datetime-local" name="sl"><br>
+邮箱：<input type="email" name="e">    <br>
+年龄：<input type="number" name="nn">    <br>
+省份 <select name="sheng">
+    <option>请选择</option>
+    <option value="1">北京</option>
+    <option value="2">上海</option>
+    <option value="3" selected>湖南</option>
+    </select>
+自我描述 <textarea cols="20" rows="5">
+
+</textarea><br>
+     <input type="submit" value="登陆">
+
+</form>
+</body>
+</html>
+
+案例
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <table border="1" align="center" width="500">
+            <tr>
+                <td><label for="username">用户名</label></td>
+                <td><input type="text" name="username" id ="username"></td>
+            </tr>
+            <tr>
+                <td><label>性别</label></td>
+                <td><input type="radio" name="gen" value="ma">男
+                    <input type="radio" name="gen" value="nv">女
+                </td>
+            </tr>
+            <tr>
+                <td><label>验证码</label></td>
+                <td><input type="text" name="ge" value="ge">
+                    <img src="未命名文件夹/IMG_2502.jpg">
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+</html>
+
+
+
+
