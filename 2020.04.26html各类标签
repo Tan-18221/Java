@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+图片标签：
+<img/> src指定图片存放的位置
+列表标签：
+1。有序列表：
+ol:包裹起来 type前面标的属性
+li:顺序
+2.无序列表：
+ul:包裹 type前面标的样式
+li:无序
+3.超链接标签
+<a>
+href=网址链接
+target = self(在本页面跳转）
+target = blank(新页面跳转）
+4.语义化标签：只是为了提供程序可读性 没有任何样式
+<header>头
+<footer>尾
+5.表格标签
+<table>定义表格 width 表示宽度 border=1给表格画线 cellspacing=0表格线变得细 bgcolor表格背景色 align对齐方式
+<tr>行
+<td>单元格
+rowspan 合并行
+colspan 合并列
+<th>表头单元
+<caption>表格标题
+<thead>表示表格的头部分 没有任何样式 增强可读性
+<tbody>表示表格的身体部分
+<tfoot>表示表格脚部分
+-->
+<img src="未命名文件夹/IMG_2502.jpg" alt="古镇" width="500" height="233">
+<ol type="A">
+    <li>睁眼</li>
+    <li>玩手机</li>
+    <li>穿衣服</li>
+</ol>
+
+<ul type="square">
+    <li>真</li>
+    <li>好</li>
+    <li>看</li>
+</ul>
+
+<a href="https://github.com/Tan-18221/Java" target="_blank">
+    <img src="未命名文件夹/IMG_2502.jpg"alt="古镇" width="500" height="233">
+</a>
+
+    <table border="1" cellspacing="0" bgcolor="blue">
+        <caption>信息表</caption>
+        <tr align="center">
+            <th rowspan="2">编号</th>
+            <th>姓名</th>
+            <th>成绩</th>
+        </tr>
+        <tr align="center">
+            <td>1</td>
+            <td>小龙女</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td colspan="2">杨过</td>
+
+        </tr>
+    </table>
+
+</body>
+</html>
