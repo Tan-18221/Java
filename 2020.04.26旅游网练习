@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旅游网</title>
+</head>
+<body>
+<!--
+如果一行只有一个单元格<tr><td><td/></tr>
+如果某一行有多个单元格
+<tr>
+    <td>
+        <table></table>
+    </td>
+</tr>
+-->
+<!--最外层布局-->
+<table width="100%" align="center">
+    <!--第一行-->
+    <tr>
+        <td>
+            <img src="未命名文件夹/IMG_2502.jpg" width="100%">
+        </td>
+    </tr>
+    <!--第二行-->
+    <tr>
+        <td>
+            <table>
+                <tr>
+                    <td>
+                        <img src="未命名文件夹/IMG_2502.jpg" width="100%">
+                    </td>
+                    <td>
+                        <img src="未命名文件夹/IMG_2502.jpg" width="100%">
+                    </td>
+                    <td>
+                        <img src="未命名文件夹/IMG_2502.jpg" width="100%">
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
