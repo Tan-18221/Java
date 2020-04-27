@@ -28,6 +28,17 @@
         a:hover{
             color: aqua;
         }
+        p{
+            color: brown;
+            font-size: 30px;
+            text-align: center;
+            line-height: 100px;
+            border: 1px solid red;
+            height: 200px;
+            background: blue;
+            float: left;
+        }
+
     </style>
 </head>
 <body>
@@ -76,6 +87,25 @@ css与html结合方式
     visited：被访问过的状态
     active：正在访问的状态
     hover：鼠标悬浮状态
+CSS属性
+1.字体文本
+    font-size:字体大小
+    color 文本颜色
+    text-align 对齐方式
+    line-height 行高
+2.背景
+    background:
+3.边框
+    border：设置边框，复合属性
+
+4.尺寸
+    width
+    height
+5.盒子模型 :控制布局
+    margin 外边距
+    padding 内边距
+    box-sizing:border-box;设置盒子属性 让width和height就是最终盒子的大小
+    float 浮动效果
 -->
 <!--
 内联样式
@@ -98,5 +128,90 @@ css与html结合方式
     <input type="text">
 <br>
 <a href="#">chuanzhiboke</a>
+<p>chua</p>
+</body>
+</html>
+
+
+案例
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background: url("1788B376-F9C8-4D78-BB4C-477D11CC1485.jpg") no-repeat center;
+        }
+        .rg{
+            width: 900px;
+            height: 500px;
+            border: 8px solid;
+            background: aliceblue;
+            margin: auto;
+            padding: 15px;
+        }
+        .rgl{
+            border: 1px solid red;
+            float: left;
+
+        }
+
+        .r{
+            border: 1px solid red;
+            float: right;
+        }
+        .cen{
+            border: 1px solid red;
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="rg">
+        <div class="rgl">
+            <p>新用户注册</p>
+            <p>user register</p>
+        </div>
+
+        <div class="cen">
+            <div class="m">
+            <form action="#" method="post">
+                <table >
+                    <tr>
+                        <td><label for="username">用户名</label></td>
+                        <td><input type="text" name="username" id ="username"></td>
+                    </tr>
+                    <tr>
+                        <td><label>性别</label></td>
+                        <td><input type="radio" name="gen" value="ma">男
+                            <input type="radio" name="gen" value="nv">女
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>验证码</label></td>
+                        <td><input type="text" name="ge" value="ge">
+
+                        </td>
+                    </tr>
+                </table>
+
+            </form>
+        </div>
+
+        </div>
+
+        <div class="r">
+            <p>已有账号<a href="#">立即登录</a></p>
+
+        </div>
+
+    </div>
 </body>
 </html>
