@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            color: blue;
+        }
+        div{
+            color: aquamarine;
+        }
+        .cl{
+            color: blueviolet;
+        }
+        div p{
+            color: brown;
+        }
+        div > p{
+            border: 1px solid;
+        }
+        input[type='text']{
+            border: 5px solid;
+        }
+        a:link{
+            color: bisque;
+        }
+        a:hover{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+<!--
+css:页面美化和布局控制（多个样式可以作用在同一个html元素上，同时生效
+1。功能强大
+2。将内容展示和样式控制分离 降低耦合度 让分工协作更容易 提高开发效率
+3。css使用
+css与html结合方式
+1。内联样式
+2。内部样式
+3。外部样式
+4.css语法
+格式
+选择器{
+属性名：属性值；
+属性名：属性值；
+}
+注意
+每一对属性需要用分号隔开，最后一对可以不隔开
+5。选择器：选择器：筛选具有相似特征的元素
+基础选择器
+1.id选择器：选择器具体的id属性值的元素,建议在一个html页面中id值唯一
+    语法格式：#id属性值{}
+2.元素选择器 选择具有相同标签名称的元素
+    语法格式：标签名称{}
+    注意事项：id选择器优先级高于元素选择器
+3.类选择器：选择具有相同的class属性值的元素
+    语法：.class属性值{}
+    类选择器优先级高于元素选择器
+扩展选择器
+1.*选择所有元素
+    语法：*{}
+2.并集选择器
+    *选择器1，选择器2{}
+3.子选择器：筛选选择器1元素下的选择器2元素
+    *语法： 选择器1 选择器2{}
+4.父选择器：筛选选择器2的父元素选择器1
+    *语法： 选择器1>选择器2{}
+5.属性选择器：选择元素名称，属性名=属性值的元素
+    语法：元素名称【属性名="属性值"】{}
+6.伪类选择器：选择一些元素具有的状态
+    语法：元素：状态{}
+    状态
+    link：初始化的状态
+    visited：被访问过的状态
+    active：正在访问的状态
+    hover：鼠标悬浮状态
+-->
+<!--
+内联样式
+在标签内使用style属性指定css代码
+内部样式
+在head标签内，定义style标签，style标签的标签体内容就是css代码
+外部样式
+定义css资源文件
+在head标签内，定义link标签，引入外部资源文件
+-->
+<div id="div1">chuanzhi</div>
+<div>heima</div>
+<p class="cl">chuanzhi</p>
+
+<div>
+    <p>chuanzhi</p>
+</div>
+    <p>heima</p>
+<div>aaa</div>
+    <input type="text">
+<br>
+<a href="#">chuanzhiboke</a>
+</body>
+</html>
