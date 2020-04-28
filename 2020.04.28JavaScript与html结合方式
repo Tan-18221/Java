@@ -1,0 +1,34 @@
+/*
+JavaScript
+一门客户端脚本语言
+运行在客户端浏览器中的，每一个浏览器都有Javascript的解析引擎
+脚本语言：不需要编译，直接可以被浏览器解析运行。
+功能：
+可以来增强用户和html页面交互过程，可以来控制html元素，让页面有一些动态效果，增强用户体验
+JavaScript = ECMAScript + JavaScript（BOM+DOM)
+ */
+
+/*
+与html的结合方式
+1.内部JS html任意位置 定义<script>标签，标签体内容就是js代码
+2.外部JS 定义<script>标签，通过src属性引入外部JS文件
+
+注意
+1.<script>可以定义在任意位置，但是定义位置会影响执行顺序
+2.<script>可以定义多个
+ */
+alert("woshiwaibude");
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        alert("helloworld");
+    </script>
+</head>
+<body>
+    <script src="jk.js"></script>
+</body>
+</html>
