@@ -1,0 +1,100 @@
+/*
+JavaScript
+运算符
+1.一元运算符：只有一个运算数的运算符
+++（--）自增自减 ++在前面就先自增再进行运算
++:正负号
+注意 在JS中，如果运算数不是运算符所要求的类型，那么JS引擎会自动将运算数进行类型转换，在变量前加+号可以转换数据类型
+其他类型转number:
+string转number：按照字面值转换，如果字面值不是数字，则转成NaN
+boolean转number：true转为1，false转为0
+2.算数运算符
+3.赋值运算符
+4.比较运算符
+    比较方式
+    1.类型相同：直接比较
+        字符串：按照字典顺序比较。按位比较，逐一比较，直到得出大小为止
+    2.类型不同：先进行类型转换，再去比较
+        === 全等于，在比较之前，先判断类型，如果类型不一样，则直接返回false
+5.逻辑运算符
+    && 与
+    || 或
+    ！ 非
+    其他类型转boolean：
+    1.number：0为假，非0为真
+    2.string：除了空字符串（" "）其他都是true
+    3.null & undefined：都是false
+    4.对象：所有对象为true
+6.三元运算符
+    ？：表达式
+    语法  表达式？值1：值2；
+    判断表达式的值，如果是true则取值1，如果是false则取值2；
+ */
+alert("woshiwaibude");
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一元运算符</title>
+    <script>
+        var a=3;
+        var b=a++;
+        document.write(a);
+        var c=+"988";
+        alert(typeof (c))
+        alert(c+1);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>算数，比较运算符</title>
+    <script>
+        var a=3;
+        var b=4;
+        document.write(a+b +"<br>");
+
+        document.write((3>4) +"<br>");
+        document.write(("abc">"acd")+"<br>");
+        document.write(("123"===123)+"<br>");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>逻辑运算符 & 三元运算符</title>
+    <script>
+        var a=3;
+        document.write((!a)+"<br>");
+        var b="klll";
+        document.write((!b)+"<br>");
+        var c=4;
+        var d=5;
+        var s=c>d?1:0;
+        alert(c);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
