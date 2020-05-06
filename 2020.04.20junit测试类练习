@@ -48,4 +48,35 @@ public class t {
 }
 
 
+package k;
+
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+public class test {
+    @Before
+    public void set(){
+        t kl=new t();
+    }
+    @After
+    public void c(){
+        System.out.println("clear");
+    }
+    @Test
+    public void testAdd(){
+        t kl=new t();
+        int re=kl.add(1,2);
+        Assert.assertEquals(3,re);
+    }
+    @Test
+    public void testSub(){
+        System.out.println("jjj");
+    }
+
+    }
+
+
+
 
